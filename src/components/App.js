@@ -1,5 +1,5 @@
 import React from "react";
-import ArticleList from "./ArticleList";
+import ArticleList from "./ArticleList/index";
 import articles from '../fixtures';
 import 'bootstrap/dist/css/bootstrap.css';
 
