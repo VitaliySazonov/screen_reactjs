@@ -1,15 +1,22 @@
 import React, {Component} from "react";
 
 class Article extends Component {
-    state = {
-        isOpen: true
-    };
+    constructor(props) {
+        super(props);
+        this.state = {
+            isOpen: props.defaultOpen
+        };
+    }
+
+    componentWillMount() {
+        console.log('---', 'mounting');
+    }
+    
 
     render() {
 
         const {article} = this.props;
         const style = {width: '50%'};
-        // console.log('=====', this.props);
         const body = this.state.isOpen && <section className="card-text">{article.text}</section>
         return (
             <div className="card mx-auto" style={style}>
